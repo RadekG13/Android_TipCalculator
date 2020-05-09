@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/BaseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="68dp"
+        android:text="Podstawa"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Rate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Jakość obsługi"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/BaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/TipPercentage" />
+
+    <TextView
+        android:id="@+id/Rate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:text="Jakość jedzenia"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/BaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/Rate1" />
+
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="44dp"
+        android:max="30"
+        android:progress="15"
+        app:layout_constraintBottom_toBottomOf="@id/TipPercentage"
+        app:layout_constraintStart_toEndOf="@+id/TipPercentage"
+        app:layout_constraintTop_toTopOf="@id/TipPercentage"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="227dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="16dp"
+        android:checkedButton="@+id/radioButton6"
+        app:layout_constraintBottom_toTopOf="@+id/Rate2"
+        app:layout_constraintStart_toEndOf="@+id/Rate1"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip">
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="beznadziejna" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="akceptowalna" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="dobra" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="super" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/BaseLabel"
+        app:layout_constraintStart_toEndOf="@+id/BaseLabel" />
+
+    <RatingBar
+        android:id="@+id/ratingBarTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:rating="0"
+        app:layout_constraintBottom_toBottomOf="@+id/Rate2"
+        app:layout_constraintStart_toEndOf="@+id/Rate2"
+        app:layout_constraintTop_toTopOf="@id/Rate2" />
+
+    <TextView
+        android:id="@+id/TipPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="15%"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/BaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/BaseLabel" />
+
+
+    <TextView
+        android:id="@+id/TipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="250dp"
+        android:text="Napiwek"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Rate1" />
+
+    <TextView
+        android:id="@+id/TipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/TipLabel"
+        app:layout_constraintStart_toEndOf="@+id/TipLabel"
+        tools:text="180" />
+
+    <TextView
+        android:id="@+id/BillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/BillLabel"
+        app:layout_constraintStart_toEndOf="@+id/BillLabel"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/BillLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Całość"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/TipLabel"
+        app:layout_constraintEnd_toEndOf="@id/TipLabel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
